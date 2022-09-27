@@ -49,7 +49,18 @@ Plug 'saadparwaiz1/cmp_luasnip'
 
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
+Plug 'williamboman/mason.nvim'
 Plug 'RRethy/vim-illuminate'
+
+"}}}
+
+
+" ================= DAP ================== "{{{
+
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'llmxby/dap-buddy.nvim' , { 'branch': 'feat/master' }
+Plug 'leoluz/nvim-dap-go'
 
 "}}}
 
@@ -62,6 +73,11 @@ Plug 'moll/vim-bbye'                                         " tab close
 Plug 'windwp/nvim-autopairs'                                 " autopairs
 Plug 'nvim-lua/plenary.nvim'                                 " Useful lua functions used by lots of plugins
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }     " searching
+Plug 'akinsho/toggleterm.nvim'                               " terminals
+Plug 'numToStr/Comment.nvim'                                 " comment
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
+Plug 'folke/todo-comments.nvim'                              " todo-comments
+Plug 'lewis6991/gitsigns.nvim'                               " git
 
 call plug#end()
 
@@ -205,5 +221,29 @@ lua require('user/autopairs')
 " ================= lsp ================== "{{{
 
 lua require('user/lsp/init')
+
+"}}}
+
+" ================= toggleterm ================== "{{{
+
+lua require('user/toggleterm')
+
+"}}}
+
+" ================= DAP ================== "{{{
+
+lua require('user/dap')
+
+"}}}
+
+" ================= comment ================== "{{{
+
+lua require('user/comment')
+
+"}}}
+
+" ================= mason ================== "{{{
+
+lua require('user/mason')
 
 "}}}

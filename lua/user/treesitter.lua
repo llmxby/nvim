@@ -17,6 +17,9 @@ configs.setup({
 	autopairs = {
 		enable = true,
 	},
+    context_commentstring = {
+        enable = true
+    },
     -- 启用增量选择
     incremental_selection = {
         enable = true,
