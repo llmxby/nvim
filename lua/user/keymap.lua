@@ -32,6 +32,6 @@ keymap("n", "<leader>jp", ":HopPatternMW<CR>", opts)
 keymap("n", "<leader>ja", ":HopAnywhereMW<CR>", opts)
 
 -- Trouble
-keymap("n", "<leader>lq", "<cmd>TroubleToggle quickfix<cr>", opts)
+keymap("n", "<leader>lq", "<cmd>TroubleToggle<cr>", opts)
 keymap("n", "<leader>ld", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 keymap("n", "<leader>lw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
