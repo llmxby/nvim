@@ -66,7 +66,6 @@ Plug 'leoluz/nvim-dap-go'
 
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
-Plug 'fatih/vim-go'                                          " Go
 Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }            " tab 
 Plug 'moll/vim-bbye'                                         " tab close
@@ -78,6 +77,8 @@ Plug 'numToStr/Comment.nvim'                                 " comment
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
 Plug 'folke/todo-comments.nvim'                              " todo-comments
 Plug 'lewis6991/gitsigns.nvim'                               " git
+Plug 'solarnz/thrift.vim'                                    " thrift syntax
+Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
 
 call plug#end()
 
