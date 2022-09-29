@@ -64,6 +64,14 @@ Plug 'leoluz/nvim-dap-go'
 
 "}}}
 
+" ================= trouble ================== "{{{
+
+" A pretty list for showing diagnostics
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'folke/trouble.nvim'
+
+"}}}
+
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
 Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
@@ -216,6 +224,12 @@ lua require('user/gitsigns')
 " ================= hop ================== "{{{
 
 lua require('user/hop')
+
+"}}}
+
+" ================= trouble ================== "{{{
+
+lua require('user/trouble')
 
 "}}}
 

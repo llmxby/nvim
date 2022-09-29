@@ -30,3 +30,8 @@ keymap("n", "<leader>jc", ":HopChar1MW<CR>", opts)
 keymap("n", "<leader>jw", ":HopWordMW<CR>", opts)
 keymap("n", "<leader>jp", ":HopPatternMW<CR>", opts)
 keymap("n", "<leader>ja", ":HopAnywhereMW<CR>", opts)
+
+-- Trouble
+keymap("n", "<leader>lq", "<cmd>TroubleToggle<cr>", opts)
+keymap("n", "<leader>ld", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
+keymap("n", "<leader>lw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
