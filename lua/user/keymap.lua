@@ -6,6 +6,10 @@ keymap("n", "<leader>ft", ":Telescope live_grep<CR>", opts)
 keymap("n", "<leader>fe", ":Telescope oldfiles<CR>", opts)
 keymap("n", "<leader>fb", ":Telescope buffers<CR>", opts)
 keymap("n", "<leader>fc", ":Telescope commands<CR>", opts)
+keymap("n", "<leader>fv", ":Telescope treesitter<CR>", opts)
+keymap("n", "gd", ":Telescope lsp_definitions<CR>", opts)
+keymap("n", "gr", ":Telescope lsp_references<CR>", opts)
+keymap("n", "gI", ":Telescope lsp_implementations<CR>", opts)
 
 
 -- DAP

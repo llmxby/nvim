@@ -88,6 +88,7 @@ Plug 'moll/vim-bbye'                                         " tab close
 Plug 'windwp/nvim-autopairs'                                 " autopairs
 Plug 'nvim-lua/plenary.nvim'                                 " Useful lua functions used by lots of plugins
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }     " searching
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }                 
 Plug 'akinsho/toggleterm.nvim'                               " terminals
 Plug 'numToStr/Comment.nvim'                                 " comment
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
