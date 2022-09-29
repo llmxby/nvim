@@ -79,6 +79,7 @@ Plug 'folke/todo-comments.nvim'                              " todo-comments
 Plug 'lewis6991/gitsigns.nvim'                               " git
 Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
+Plug 'phaazon/hop.nvim'                                      " fast jump anywhere
 
 call plug#end()
 
@@ -209,6 +210,12 @@ lua require('user/mason')
 " ================= gitsigns ================== "{{{
 
 lua require('user/gitsigns')
+
+"}}}
+
+" ================= hop ================== "{{{
+
+lua require('user/hop')
 
 "}}}
 

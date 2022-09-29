@@ -23,3 +23,10 @@ keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
 -- Comment
 keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle.linewise.current()<CR>", opts)
 keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(vim.fn.visualmode())<CR>')
+
+-- Hop
+keymap("n", "<leader>jl", ":HopLineMW<CR>", opts)
+keymap("n", "<leader>jc", ":HopChar1MW<CR>", opts)
+keymap("n", "<leader>jw", ":HopWordMW<CR>", opts)
+keymap("n", "<leader>jp", ":HopPatternMW<CR>", opts)
+keymap("n", "<leader>ja", ":HopAnywhereMW<CR>", opts)

@@ -43,8 +43,8 @@ null_ls.setup {
                 buffer = bufnr,
                 callback = function()
                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
-                    -- lsp_formatting(bufnr)
-                    vim.lsp.buf.formatting_sync()
+                    lsp_formatting(bufnr)
+                    -- vim.lsp.buf.formatting_sync()
                 end,
             })
         end
