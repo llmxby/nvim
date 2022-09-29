@@ -72,6 +72,14 @@ Plug 'folke/trouble.nvim'
 
 "}}}
 
+" ================= git ================== "{{{
+
+Plug 'lewis6991/gitsigns.nvim'                               
+Plug 'sindrets/diffview.nvim'
+Plug 'f-person/git-blame.nvim'
+
+"}}}
+
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
 Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
@@ -84,7 +92,6 @@ Plug 'akinsho/toggleterm.nvim'                               " terminals
 Plug 'numToStr/Comment.nvim'                                 " comment
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
 Plug 'folke/todo-comments.nvim'                              " todo-comments
-Plug 'lewis6991/gitsigns.nvim'                               " git
 Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
 Plug 'phaazon/hop.nvim'                                      " fast jump anywhere
@@ -107,6 +114,7 @@ set showmatch                                                " Show matching bra
 set noswapfile                                               " no swap files
 set noundofile                                               " no undo files
 set nobackup                                                 " no backup files
+lua vim.g.gitblame_enabled = 0                               -- git blame default close
 
 "}}}
 

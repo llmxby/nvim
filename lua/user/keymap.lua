@@ -35,3 +35,9 @@ keymap("n", "<leader>ja", ":HopAnywhereMW<CR>", opts)
 keymap("n", "<leader>lq", "<cmd>TroubleToggle<cr>", opts)
 keymap("n", "<leader>ld", "<cmd>TroubleToggle document_diagnostics<cr>", opts)
 keymap("n", "<leader>lw", "<cmd>TroubleToggle workspace_diagnostics<cr>", opts)
+
+-- Git 
+keymap("n", "<leader>wb", "<cmd>GitBlameToggle<cr>", opts)
+keymap("n", "<leader>wd", "<cmd>DiffviewOpen<cr>", opts)
+keymap("n", "<leader>wc", "<cmd>DiffviewClose<cr>", opts)
+keymap("n", "<leader>wh", "<cmd>DiffviewFileHistory %<cr>", opts)
