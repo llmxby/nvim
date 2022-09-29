@@ -41,7 +41,29 @@ dap_go.setup()
 -- })
 -- add other configs here
 
-dapui.setup {}
+dapui.setup {
+    layouts = {
+    {
+      elements = {
+      -- Elements can be strings or table with id and size keys.
+        { id = "repl", size = 0.25 },
+        "console",
+        "stacks",
+        "watches",
+      },
+      size = 40, -- 40 columns
+      position = "left",
+    },
+    {
+      elements = {
+        "scopes",
+        "breakpoints",
+      },
+      size = 0.25, -- 25% of total lines
+      position = "bottom",
+    },
+  },
+}
 
 vim.fn.sign_define("DapBreakpoint", { text = "", texthl = "DiagnosticSignError", linehl = "", numhl = "" })
 
