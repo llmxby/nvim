@@ -80,6 +80,13 @@ Plug 'f-person/git-blame.nvim'
 
 "}}}
 
+" ================= motion ================== "{{{
+
+Plug 'mfussenegger/nvim-treehopper'
+Plug 'phaazon/hop.nvim'
+
+"}}}
+
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
 Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
@@ -95,7 +102,6 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
 Plug 'folke/todo-comments.nvim'                              " todo-comments
 Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
-Plug 'phaazon/hop.nvim'                                      " fast jump anywhere
 
 call plug#end()
 
@@ -113,9 +119,17 @@ set noshowmode                                               " dont show current
 set termguicolors
 set showmatch                                                " Show matching brackets/parenthesis
 set noswapfile                                               " no swap files
-set noundofile                                               " no undo files
+set undofile                                                 " undo files
 set nobackup                                                 " no backup files
+set autoread
 lua vim.g.gitblame_enabled = 0                               -- git blame default close
+
+"}}}
+
+" ============= auto read,write ============== "{{{
+
+au FocusGained,BufEnter * :silent! !
+au FocusLost,WinLeave * :silent! w
 
 "}}}
 
