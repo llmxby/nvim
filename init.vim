@@ -121,15 +121,7 @@ set showmatch                                                " Show matching bra
 set noswapfile                                               " no swap files
 set undofile                                                 " undo files
 set nobackup                                                 " no backup files
-set autoread
 lua vim.g.gitblame_enabled = 0                               -- git blame default close
-
-"}}}
-
-" ============= auto read,write ============== "{{{
-
-au FocusGained,BufEnter * :silent! !
-au FocusLost,WinLeave * :silent! w
 
 "}}}
 
