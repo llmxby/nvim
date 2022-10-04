@@ -26,6 +26,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'rafamadriz/friendly-snippets'
 
 " For vsnip users.
 " Plug 'hrsh7th/cmp-vsnip'
@@ -82,7 +83,6 @@ Plug 'f-person/git-blame.nvim'
 
 " ================= motion ================== "{{{
 
-Plug 'mfussenegger/nvim-treehopper'
 Plug 'phaazon/hop.nvim'
 
 "}}}
@@ -102,6 +102,7 @@ Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
 Plug 'folke/todo-comments.nvim'                              " todo-comments
 Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
+Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
 
 call plug#end()
 
@@ -247,4 +248,29 @@ lua require('user/hop')
 lua require('user/trouble')
 
 "}}}
+
+" ================= aerial ================== "{{{
+
+lua require('user/aerial')
+
+"}}}
+
+" ================= clipboard ================== "{{{
+
+if executable('clipboard-provider')
+    let g:clipboard = {
+          \ 'name': 'myClipboard',
+          \     'copy': {
+          \         '+': 'clipboard-provider copy',
+          \         '*': 'env COPY_PROVIDERS=tmux clipboard-provider copy',
+          \     },
+          \     'paste': {
+          \         '+': 'clipboard-provider paste',
+          \         '*': 'env COPY_PROVIDERS=tmux clipboard-provider paste',
+          \     },
+          \ }
+endif
+
+"}}}
+
 
