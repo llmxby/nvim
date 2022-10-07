@@ -153,6 +153,10 @@ noremap <A-m> :NvimTreeToggle<CR>
 nnoremap <C-h> :BufferLineCyclePrev<CR> 
 nnoremap <C-l> :BufferLineCycleNext<CR> 
 nnoremap <C-x> :Bdelete!<CR> 
+inoremap <C-b> <Left>
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+inoremap <C-f> <Right>
 lua require('user/keymap')
 
 "}}}

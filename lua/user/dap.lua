@@ -21,7 +21,7 @@ end
 
 dap_go.setup()
 
--- dap_install.config("go_delve",{})
+dap_install.config("ccppr_vsc",{})
 -- dap_install.config("go",{
 -- 	adapters = {
 -- 		type = "executable",

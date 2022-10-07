@@ -8,6 +8,7 @@ local servers = {
   "gopls",
   "jsonls",
   "vimls",
+  "clangd",
 }
 
 lsp_installer.setup()
