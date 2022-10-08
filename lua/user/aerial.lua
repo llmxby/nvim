@@ -9,6 +9,33 @@ if not status_ok then
 end
 
 aerial.setup({
-    filter_kind=false
+    filter_kind={
+        "Array",
+        "Boolean",
+        "Class",
+        "Constant",
+        "Constructor",
+        "Enum",
+        "EnumMember",
+        "Event",
+        "Field",
+        "File",
+        "Function",
+        "Interface",
+        "Key",
+        "Method",
+        "Module",
+        "Namespace",
+        "Null",
+        "Number",
+        "Object",
+        "Operator",
+        "Package",
+        "Property",
+        "String",
+        "Struct",
+        "TypeParameter",
+        "Variable",
+    }
 })
 telescope.load_extension('aerial')

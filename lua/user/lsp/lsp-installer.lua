@@ -18,6 +18,10 @@ if not lspconfig_status_ok then
   return
 end
 
+lspconfig.vimls.setup{
+  on_attach = require("aerial").on_attach,
+}
+
 local opts = {}
 
 for _, name in pairs(servers) do
