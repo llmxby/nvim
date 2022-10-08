@@ -68,7 +68,6 @@ Plug 'leoluz/nvim-dap-go'
 " ================= trouble ================== "{{{
 
 " A pretty list for showing diagnostics
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 
 "}}}
@@ -89,8 +88,7 @@ Plug 'phaazon/hop.nvim'
 
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
-Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
-Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }            " tab 
+Plug 'akinsho/buffnvim-autopairserline.nvim', { 'tag': 'v2.*' }            " tab 
 Plug 'moll/vim-bbye'                                         " tab close
 Plug 'windwp/nvim-autopairs'                                 " autopairs
 Plug 'nvim-lua/plenary.nvim'                                 " Useful lua functions used by lots of plugins
@@ -104,6 +102,7 @@ Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
 Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
 Plug 'rlue/vim-barbaric'                                     " auto change Input
+Plug 'nathom/filetype.nvim'                                  " accelerate startup time
 
 call plug#end()
 
@@ -273,6 +272,12 @@ lua require('user/aerial')
 
 "}}}
 
+" ================= filetype ================== "{{{
+
+lua require('user/filetype')
+
+"}}}
+
 " ================= clipboard ================== "{{{
 
 if executable('clipboard-provider')
@@ -290,5 +295,3 @@ if executable('clipboard-provider')
 endif
 
 "}}}
-
-
