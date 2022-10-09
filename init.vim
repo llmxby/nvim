@@ -103,6 +103,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters an
 Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
 Plug 'rlue/vim-barbaric'                                     " auto change Input
 Plug 'nathom/filetype.nvim'                                  " accelerate startup time
+Plug 'ray-x/go.nvim'                                         " go
 
 call plug#end()
 
