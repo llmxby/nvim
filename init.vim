@@ -88,12 +88,12 @@ Plug 'phaazon/hop.nvim'
 
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
-Plug 'akinsho/buffnvim-autopairserline.nvim', { 'tag': 'v2.*' }            " tab 
+Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }            " tab 
 Plug 'moll/vim-bbye'                                         " tab close
 Plug 'windwp/nvim-autopairs'                                 " autopairs
 Plug 'nvim-lua/plenary.nvim'                                 " Useful lua functions used by lots of plugins
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }     " searching
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }                 
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'akinsho/toggleterm.nvim'                               " terminals
 Plug 'numToStr/Comment.nvim'                                 " comment
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
