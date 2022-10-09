@@ -103,6 +103,7 @@ Plug 'folke/todo-comments.nvim'                              " todo-comments
 Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
 Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
+Plug 'rlue/vim-barbaric'                                     " auto change Input
 
 call plug#end()
 

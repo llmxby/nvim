@@ -33,7 +33,7 @@ null_ls.setup {
         formatting.gofmt,
         formatting.goimports,
         formatting.clang_format,
-        diagnostics.flake8,
+        diagnostics.golangci_lint,
     },
     -- you can reuse a shared lspconfig on_attach callback here
     on_attach = function(client, bufnr)
