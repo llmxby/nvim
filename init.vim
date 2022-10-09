@@ -68,7 +68,6 @@ Plug 'leoluz/nvim-dap-go'
 " ================= trouble ================== "{{{
 
 " A pretty list for showing diagnostics
-Plug 'kyazdani42/nvim-web-devicons'
 Plug 'folke/trouble.nvim'
 
 "}}}
@@ -89,13 +88,12 @@ Plug 'phaazon/hop.nvim'
 
 Plug 'kyazdani42/nvim-web-devicons'                          " optional, for file icons
 Plug 'kyazdani42/nvim-tree.lua'                              " file tree
-Plug 'kyazdani42/nvim-web-devicons'                          " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim', { 'tag': 'v2.*' }            " tab 
 Plug 'moll/vim-bbye'                                         " tab close
 Plug 'windwp/nvim-autopairs'                                 " autopairs
 Plug 'nvim-lua/plenary.nvim'                                 " Useful lua functions used by lots of plugins
 Plug 'nvim-telescope/telescope.nvim', { 'tag': '0.1.x' }     " searching
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }                 
+Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 Plug 'akinsho/toggleterm.nvim'                               " terminals
 Plug 'numToStr/Comment.nvim'                                 " comment
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'           " comment
@@ -104,6 +102,7 @@ Plug 'solarnz/thrift.vim'                                    " thrift syntax
 Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters and linters
 Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
 Plug 'rlue/vim-barbaric'                                     " auto change Input
+Plug 'nathom/filetype.nvim'                                  " accelerate startup time
 
 call plug#end()
 
@@ -134,6 +133,19 @@ set tabstop=4 softtabstop=4 shiftwidth=4 autoindent          " tab width
 set expandtab smarttab                                       " tab key actions
 set splitright                                               " open vertical split to the right
 set splitbelow                                               " open horizontal split to the bottom
+
+"}}}
+
+" ============= Auto reload ============== "{{{
+
+set autoread
+au CursorHold * checktime
+au CursorHold,CursorHoldI * checktime
+au FocusGained,BufEnter * checktime
+augroup vimrc-checktime
+  autocmd!
+  autocmd WinEnter * checktime
+augroup END
 
 "}}}
 
@@ -260,6 +272,12 @@ lua require('user/aerial')
 
 "}}}
 
+" ================= filetype ================== "{{{
+
+lua require('user/filetype')
+
+"}}}
+
 " ================= clipboard ================== "{{{
 
 if executable('clipboard-provider')
@@ -277,5 +295,3 @@ if executable('clipboard-provider')
 endif
 
 "}}}
-
-
