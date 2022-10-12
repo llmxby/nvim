@@ -26,7 +26,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'f3fora/cmp-spell'                                      
+" Plug 'f3fora/cmp-spell'                                      
 Plug 'rafamadriz/friendly-snippets'
 
 " For vsnip users.
@@ -125,6 +125,9 @@ set noswapfile                                               " no swap files
 set undofile                                                 " undo files
 set nobackup                                                 " no backup files
 lua vim.g.gitblame_enabled = 0                               -- git blame default close
+" lua vim.opt.spell = true
+" lua vim.opt.spelllang = { 'en_us','cjk'}
+" lua vim.opt.spelloptions = "camel"
 
 "}}}
 
