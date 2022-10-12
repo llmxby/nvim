@@ -26,6 +26,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+" Plug 'f3fora/cmp-spell'                                      
 Plug 'rafamadriz/friendly-snippets'
 
 " For vsnip users.
@@ -103,6 +104,7 @@ Plug 'jose-elias-alvarez/null-ls.nvim'                       " for formatters an
 Plug 'stevearc/aerial.nvim'                                  " skimming and quick navigation
 Plug 'rlue/vim-barbaric'                                     " auto change Input
 Plug 'nathom/filetype.nvim'                                  " accelerate startup time
+Plug 'ray-x/go.nvim'                                         " go
 
 call plug#end()
 
@@ -123,6 +125,9 @@ set noswapfile                                               " no swap files
 set undofile                                                 " undo files
 set nobackup                                                 " no backup files
 lua vim.g.gitblame_enabled = 0                               -- git blame default close
+" lua vim.opt.spell = true
+" lua vim.opt.spelllang = { 'en_us','cjk'}
+" lua vim.opt.spelloptions = "camel"
 
 "}}}
 

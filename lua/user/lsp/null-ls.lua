@@ -34,6 +34,20 @@ null_ls.setup {
         formatting.goimports,
         formatting.clang_format,
         diagnostics.golangci_lint,
+        diagnostics.misspell,
+        diagnostics.cspell.with({
+            filetypes = { "markdown", "text", "gitcommit","go" },
+		    disabled_filetypes = { "nvimtree", "lua" },
+            extra_args = {
+				"--config",
+				vim.fn.expand("~/.config/nvim/lua/user/lsp/cspell.json"),
+				"--show-suggestions",
+        "-v"
+			},
+            diagnostics_postprocess = function(diagnostic)
+                diagnostic.severity = vim.diagnostic.severity['INFO']
+            end,
+        }),
     },
     -- you can reuse a shared lspconfig on_attach callback here
     on_attach = function(client, bufnr)

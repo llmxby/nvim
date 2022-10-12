@@ -1,0 +1,20 @@
+{
+    "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
+    "version": "0.2",
+    "language": "en",
+    "words": [
+        "byted",
+        "kitex",
+        "calloption",
+        "tidwall",
+        "gjson",
+        "clientoption",
+        "IMPRTYPE",
+        "Impr",
+        "kgsrv",
+        "cloudplat",
+        "conv",
+        "tccclient"
+    ],
+    "flagWords": ["hte"]
+}
