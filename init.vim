@@ -26,6 +26,7 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
+Plug 'f3fora/cmp-spell'                                      
 Plug 'rafamadriz/friendly-snippets'
 
 " For vsnip users.
@@ -104,7 +105,6 @@ Plug 'stevearc/aerial.nvim'                                  " skimming and quic
 Plug 'rlue/vim-barbaric'                                     " auto change Input
 Plug 'nathom/filetype.nvim'                                  " accelerate startup time
 Plug 'ray-x/go.nvim'                                         " go
-Plug 'lewis6991/spellsitter.nvim'                            " spell 
 
 call plug#end()
 
@@ -277,12 +277,6 @@ lua require('user/aerial')
 " ================= filetype ================== "{{{
 
 lua require('user/filetype')
-
-"}}}
-
-" ================= spellsitter ================== "{{{
-
-lua require('user/spellsitter')
 
 "}}}
 
