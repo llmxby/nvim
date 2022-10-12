@@ -105,6 +105,8 @@ Plug 'stevearc/aerial.nvim'                                  " skimming and quic
 Plug 'rlue/vim-barbaric'                                     " auto change Input
 Plug 'nathom/filetype.nvim'                                  " accelerate startup time
 Plug 'ray-x/go.nvim'                                         " go
+Plug 'beeender/Comrade'                                      " JetBrains client
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins'} " complement
 
 call plug#end()
 
@@ -197,12 +199,13 @@ lua require('user/treesitter')
 
 
 
-" ================= Automatic complement ================== "{{{
-
-set completeopt=menu,menuone,noselect
-lua require('user/cmp')
-
-"}}}
+" " ================= Automatic complement ================== "{{{
+"
+" set completeopt=menu,menuone,noselect
+" lua require('user/cmp')
+"
+let g:deoplete#enable_at_startup = 1
+" "}}}
 
 " ================= nvim-tree ================== "{{{
 
@@ -223,11 +226,11 @@ lua require('user/autopairs')
 
 "}}}
 
-" ================= lsp ================== "{{{
-
-lua require('user/lsp/init')
-
-"}}}
+" " ================= lsp ================== "{{{
+"
+" lua require('user/lsp/init')
+"
+" "}}}
 
 " ================= toggleterm ================== "{{{
 
