@@ -124,13 +124,14 @@ cmp.setup({
         end
     })},
 	sources = {
-		{ name = "nvim_lsp" },
-		{ name = "nvim_lua" },
-		{ name = "luasnip" },
-		{ name = "buffer" },
-		{ name = "path" },
-		{ name = "cmp_tabnine" },
+		{ name = "cmp_tabnine" , priority = 8},
+		{ name = "luasnip" , priority = 8},
+		{ name = "nvim_lsp" , priority = 8},
+		{ name = "buffer" , priority = 7},
+		{ name = "path" , priority = 6},
+		{ name = "nvim_lua" , priority = 5},
 	},
+    preselect = cmp.PreselectMode.None,
 	confirm_opts = {
 		behavior = cmp.ConfirmBehavior.Replace,
 		select = false,
@@ -165,11 +166,11 @@ cmp.setup({
   sorting = {
     priority_weight = 2,
     comparators = {
-      require('cmp_tabnine.compare'),
+      compare.locality,
+      compare.recently_used,
+      compare.score,
       compare.offset,
       compare.exact,
-      compare.score,
-      compare.recently_used,
       compare.kind,
       compare.sort_text,
       compare.length,

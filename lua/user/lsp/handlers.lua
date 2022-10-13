@@ -86,6 +86,7 @@ M.on_attach = function(client, bufnr)
     return
   end
   illuminate.on_attach(client)
+  require("aerial").on_attach(client, bufnr)
 end
 
 return M
