@@ -14,7 +14,9 @@
         "kgsrv",
         "cloudplat",
         "conv",
-        "tccclient"
+        "tccclient",
+        "kitutil",
+        "eventbus"
     ],
     "flagWords": ["hte"]
 }

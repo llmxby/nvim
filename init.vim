@@ -26,9 +26,10 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-copilot'
+Plug 'tzachar/cmp-tabnine', { 'do': './install.sh' }
 " Plug 'f3fora/cmp-spell'                                      
 Plug 'rafamadriz/friendly-snippets'
+Plug 'onsails/lspkind-nvim'
 
 " For vsnip users.
 " Plug 'hrsh7th/cmp-vsnip'
