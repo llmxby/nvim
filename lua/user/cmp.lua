@@ -128,8 +128,8 @@ cmp.setup({
 		{ name = "luasnip" , priority = 8},
 		{ name = "nvim_lsp" , priority = 8},
 		{ name = "buffer" , priority = 7},
-		{ name = "path" , priority = 6},
 		{ name = "nvim_lua" , priority = 5},
+		{ name = "path" , priority = 4},
 	},
     preselect = cmp.PreselectMode.None,
 	confirm_opts = {
@@ -164,17 +164,17 @@ tabnine:setup({
 local compare = require('cmp.config.compare')
 cmp.setup({
   sorting = {
-    priority_weight = 2,
+    priority_weight = 1.0,
     comparators = {
       compare.locality,
       compare.recently_used,
       compare.score,
       compare.offset,
-      compare.exact,
-      compare.kind,
-      compare.sort_text,
-      compare.length,
       compare.order,
+      -- compare.exact,
+      -- compare.kind,
+      -- compare.sort_text,
+      -- compare.length,
     },
   },
 })

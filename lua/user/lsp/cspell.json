@@ -16,7 +16,8 @@
         "conv",
         "tccclient",
         "kitutil",
-        "eventbus"
+        "eventbus",
+        "Upsert"
     ],
     "flagWords": ["hte"]
 }
