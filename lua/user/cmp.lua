@@ -143,3 +143,37 @@ cmp.setup({
 		ghost_text = true,
 	},
 })
+
+local tabnine_status, tabnine = pcall(require, 'cmp_tabnine.config')
+if not tabnine_status then
+  print 'tabnine could not be found!'
+  return
+end 
+
+tabnine:setup({
+	max_lines = 1000;
+	max_num_results = 2;
+	sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+	ignored_file_types = {
+	};
+})
+
+local compare = require('cmp.config.compare')
+cmp.setup({
+  sorting = {
+    priority_weight = 2,
+    comparators = {
+      require('cmp_tabnine.compare'),
+      compare.offset,
+      compare.exact,
+      compare.score,
+      compare.recently_used,
+      compare.kind,
+      compare.sort_text,
+      compare.length,
+      compare.order,
+    },
+  },
+})
