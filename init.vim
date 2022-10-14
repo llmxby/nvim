@@ -14,8 +14,8 @@ endif
 call plug#begin(expand('~/.config/nvim/plugged'))
 " ================= looks and GUI stuff ================== "{{{
 
-Plug 'joshdick/onedark.vim'                                  " theme
-Plug 'vim-airline/vim-airline'                               " theme
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }           " theme
+Plug 'nvim-lualine/lualine.nvim'                             " statusline
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " Syntax highlighting
 
 "}}}
@@ -184,9 +184,7 @@ lua require('user/keymap')
 
 " ============= Themeing ============== "{{{
 syntax on
-let g:airline_theme='onedark'
-let g:onedark_termcolors=256
-colorscheme onedark
+colorscheme tokyonight
 
 "}}}
 
@@ -282,6 +280,12 @@ lua require('user/aerial')
 " ================= filetype ================== "{{{
 
 lua require('user/filetype')
+
+"}}}
+
+" ================= lualine ================== "{{{
+
+lua require('user/lualine')
 
 "}}}
 
