@@ -17,7 +17,13 @@
         "tccclient",
         "kitutil",
         "eventbus",
-        "Upsert"
+        "Upsert",
+        "goredis",
+        "gorm",
+        "Bytedance",
+        "binlog",
+        "Nexts",
+        "smartloader"
     ],
     "flagWords": ["hte"]
 }
