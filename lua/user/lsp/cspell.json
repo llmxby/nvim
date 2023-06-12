@@ -23,7 +23,12 @@
         "Bytedance",
         "binlog",
         "Nexts",
-        "smartloader"
+        "smartloader",
+        "bytedlogger",
+        "bytedtqs",
+        "sqlglot",
+        "idls",
+        "consts"
     ],
     "flagWords": ["hte"]
 }

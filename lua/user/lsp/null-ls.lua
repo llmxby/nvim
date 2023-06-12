@@ -35,8 +35,12 @@ null_ls.setup {
         formatting.clang_format,
         diagnostics.golangci_lint,
         diagnostics.misspell,
+        formatting.black,
+        formatting.isort,
+        -- diagnostics.flake8,
+        -- diagnostics.mypy,
         diagnostics.cspell.with({
-            filetypes = { "markdown", "text", "gitcommit","go" },
+            filetypes = { "markdown", "text", "gitcommit","go","python"},
 		    disabled_filetypes = { "nvimtree", "lua" },
             extra_args = {
 				"--config",

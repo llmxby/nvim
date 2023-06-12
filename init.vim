@@ -55,6 +55,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'williamboman/mason.nvim'
 Plug 'RRethy/vim-illuminate'
+Plug 'elbywan/crystalline'
 
 "}}}
 

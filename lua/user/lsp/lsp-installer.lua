@@ -9,6 +9,7 @@ local servers = {
   "jsonls",
   "vimls",
   "clangd",
+  "pyright",
 }
 
 lsp_installer.setup()
@@ -42,3 +43,5 @@ for _, name in pairs(servers) do
 
   lspconfig[name].setup(opts)
 end
+
+require'lspconfig'.crystalline.setup{filetypes = {"thrift"}}
