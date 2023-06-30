@@ -4,7 +4,7 @@ if not status_ok then
 end
 
 configs.setup({
-    ensure_installed = { "go", "lua", "gomod" , "gowork" , "json" , "sql", "cpp" ,"thrift","python"}, -- A list of parser names, or "all"
+    ensure_installed = { "go", "lua", "gomod" , "gowork" , "json" , "sql", "cpp" ,"thrift", "python", "rust"}, -- A list of parser names, or "all"
 	ignore_install = { "" },                                         -- List of parsers to ignore installing
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = false,

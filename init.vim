@@ -108,6 +108,7 @@ Plug 'stevearc/aerial.nvim'                                  " skimming and quic
 Plug 'rlue/vim-barbaric'                                     " auto change Input
 Plug 'nathom/filetype.nvim'                                  " accelerate startup time
 Plug 'ray-x/go.nvim'                                         " go
+Plug 'simrat39/rust-tools.nvim'                              " rust
 
 call plug#end()
 
@@ -287,6 +288,12 @@ lua require('user/filetype')
 " ================= lualine ================== "{{{
 
 lua require('user/lualine')
+
+"}}}
+
+" ================= rust-tools ================== "{{{
+
+lua require('user/rust-tools')
 
 "}}}
 
