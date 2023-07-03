@@ -37,10 +37,11 @@ null_ls.setup {
         diagnostics.misspell,
         formatting.black,
         formatting.isort,
+        formatting.rustfmt,
         -- diagnostics.flake8,
         -- diagnostics.mypy,
         diagnostics.cspell.with({
-            filetypes = { "markdown", "text", "gitcommit","go","python"},
+            filetypes = { "markdown", "text", "gitcommit","go","python","rust"},
 		    disabled_filetypes = { "nvimtree", "lua" },
             extra_args = {
 				"--config",
@@ -63,9 +64,17 @@ null_ls.setup {
                 callback = function()
                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
                     lsp_formatting(bufnr)
+                    if vim.bo.filetype == 'rust' then
+                        local ok, err_msg = pcall(function()
+                            os.execute(string.format("rustfmt %s",vim.fn.expand("%:p")))
+                            end)
+                        if not ok then
+                        end
+                    end
                     -- vim.lsp.buf.formatting_sync()
                 end,
             })
         end
     end,
 }
+

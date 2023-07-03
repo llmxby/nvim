@@ -10,7 +10,7 @@ local servers = {
   "vimls",
   "clangd",
   "pyright",
-  "rust-analyzer",
+  "rust_analyzer"
 }
 
 lsp_installer.setup()
